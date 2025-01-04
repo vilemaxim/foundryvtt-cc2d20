@@ -8,7 +8,7 @@
 	"system": {
 	},
 	"text": {
-		"content": "<p><strong>AUTO-GENERATED. DO NOT EDIT.</strong></p>",
+		"content": "<h2>v0.0.1</h2>\n\n<ul><li>Created a folk for Muttley/foundryvtt-ac2d20</li></ul>",
 		"format": 1
 	},
 	"title": {

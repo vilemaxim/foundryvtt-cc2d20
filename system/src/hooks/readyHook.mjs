@@ -1,5 +1,5 @@
 import { prepareSkills } from "../config.mjs";
-import ACMigrationRunner from "../migrations/CCMigrationRunner.mjs";
+import CCMigrationRunner from "../migrations/CCMigrationRunner.mjs";
 
 export const readyHook = {
 	attach: () => {

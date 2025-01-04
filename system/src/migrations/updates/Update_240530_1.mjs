@@ -1,4 +1,4 @@
-import { ACUpdateBase } from "../CCUpdateBase.mjs";
+import { CCUpdateBase } from "../CCUpdateBase.mjs";
 
 export default class Update_240530_1 extends CCUpdateBase {
 	static version = 240530.1;
