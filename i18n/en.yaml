@@ -167,6 +167,7 @@ CC2D20.TEMPLATES.Attribute: Attribute
 CC2D20.TEMPLATES.Attributes: Attributes
 CC2D20.TEMPLATES.Background: Background
 CC2D20.TEMPLATES.bonus: Bonus
+CC2D20.TEMPLATES.Caste: Caste
 CC2D20.TEMPLATES.Characteristic: Characteristic
 CC2D20.TEMPLATES.Compl: Compl.
 CC2D20.TEMPLATES.Complications: Complications
@@ -176,6 +177,7 @@ CC2D20.TEMPLATES.CostEffects: Cost Effects
 CC2D20.TEMPLATES.Create_Ammo: Create Ammo
 CC2D20.TEMPLATES.Create_Special_Rule: Create Special Rule
 CC2D20.TEMPLATES.Create_Weapon: Create Weapon
+CC2D20.TEMPLATES.Culture: Culture
 CC2D20.TEMPLATES.current: current
 CC2D20.TEMPLATES.DAMAGE_EFFECTS: DAMAGE EFFECTS
 CC2D20.TEMPLATES.DAMAGE_TYPE: DAMAGE TYPE
@@ -229,7 +231,6 @@ CC2D20.TEMPLATES.Mod_Type: Mod Type
 CC2D20.TEMPLATES.MODULES: MODULES
 CC2D20.TEMPLATES.Name_Prefix: Name Prefix
 CC2D20.TEMPLATES.Name: Name
-CC2D20.TEMPLATES.Nationality: Nationality
 CC2D20.TEMPLATES.PARTY_MOMENTUM: Party Momentum
 CC2D20.TEMPLATES.Personal_Truth_Scars: Personal Truths & Scars
 CC2D20.TEMPLATES.PHYS: PHYS
@@ -288,6 +289,7 @@ CC2D20.TEMPLATES.Use_Will: Use Will
 CC2D20.TEMPLATES.Weapon_Qualities: WEAPON QUALITIES
 CC2D20.TEMPLATES.Weapon_Type: Weapon Type
 CC2D20.TEMPLATES.Weapons: Weapons
+CC2D20.TEMPLATES.Wealth: Wealth
 CC2D20.Tooltips.Attribute.agi: Agility is a mixture of speed, balance, and muscle memory, and is responsible for a character’s movement and dexterity. An agile character is quick, moving with certainty and precision.
 CC2D20.Tooltips.Attribute.bra: Brawn is the character’s physical fitness and endurance. A brawny character is strong and hardy.
 CC2D20.Tooltips.Attribute.coo: Coordination is a measure of your fine motor skills, accuracy, and sense of timing. Coordinated characters are good shots, good drivers and pilots, and excel at sleight of hand and other delicate, precise tasks.

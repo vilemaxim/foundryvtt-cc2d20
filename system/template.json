@@ -78,6 +78,10 @@
 						"bonus": 0,
 						"value": 6
 					},
+					"gra": {
+						"bonus": 0,
+						"value": 6
+					},
 					"ins": {
 						"bonus": 0,
 						"value": 6
@@ -98,8 +102,9 @@
 			"background": "",
 			"characteristic": "",
 			"languages": "",
-			"nationality": "",
-			"rank": "",
+			"culture": "",
+			"caste": "",
+			"wealth": "",
 			"spellcastingType": "traditional",
 			"templates": [
 				"base",
