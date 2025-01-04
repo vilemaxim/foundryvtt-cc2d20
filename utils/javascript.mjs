@@ -5,10 +5,10 @@ import gulpIf from "gulp-if";
 import mergeStream from "merge-stream";
 import nodeResolve from "@rollup/plugin-node-resolve";
 
-const SRC_LINT_PATHS = ["./system/ac2d20.mjs", "./system/src/"];
+const SRC_LINT_PATHS = ["./system/cc2d20.mjs", "./system/src/"];
 
-const BUILD_SRC_PATH = "./system/ac2d20.mjs";
-const BUILD_DST_PATH = "./system/ac2d20-compiled.mjs";
+const BUILD_SRC_PATH = "./system/cc2d20.mjs";
+const BUILD_DST_PATH = "./system/cc2d20-compiled.mjs";
 
 // Compile javascript source files into a single output file.
 //

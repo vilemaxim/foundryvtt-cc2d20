@@ -7,7 +7,7 @@
 		{
 			"type": "chrome",
 			"request": "launch",
-			"name": "Achtung! Cthulhu 2d20",
+			"name": "Cohors Cthulhu 2d20",
 			"url": "http://localhost:31000",
 			"webRoot": "${workspaceFolder}/system"
 		}

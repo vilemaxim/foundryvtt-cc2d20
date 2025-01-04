@@ -4,21 +4,13 @@
 	"effects": [
 	],
 	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
+	"img": "systems/cc2d20/assets/skills.svg",
 	"name": "Academia",
 	"system": {
 		"defaultAttribute": "agi",
 		"description": "",
 		"favorite": false,
 		"focuses": [
-			{
-				"isfocus": false,
-				"title": "Art"
-			},
-			{
-				"isfocus": false,
-				"title": "Cryptography"
-			},
 			{
 				"isfocus": false,
 				"title": "Finance"
@@ -33,11 +25,11 @@
 			},
 			{
 				"isfocus": false,
-				"title": "Occultism"
+				"title": "Philosophy"
 			},
 			{
 				"isfocus": false,
-				"title": "Science"
+				"title": "Religion"
 			}
 		],
 		"summary": "",

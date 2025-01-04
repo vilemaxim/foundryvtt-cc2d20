@@ -1,6 +1,6 @@
-import { ACUpdateBase } from "../ACUpdateBase.mjs";
+import { ACUpdateBase } from "../CCUpdateBase.mjs";
 
-export default class Update_240531_1 extends ACUpdateBase {
+export default class Update_240531_1 extends CCUpdateBase {
 	static version = 240531.1;
 
 	async updateActor(actorData) {

@@ -13,17 +13,17 @@ export default class DialogEditTruth extends Dialog {
 		};
 
 		const html = await renderTemplate(
-			"systems/ac2d20/templates/dialogs/edit-truth.hbs",
+			"systems/cc2d20/templates/dialogs/edit-truth.hbs",
 			dialogData
 		);
 
 		const label = index < 0
-			? game.i18n.localize("AC2D20.TEMPLATES.ADD")
-			: game.i18n.localize("AC2D20.TEMPLATES.SAVE");
+			? game.i18n.localize("CC2D20.TEMPLATES.ADD")
+			: game.i18n.localize("CC2D20.TEMPLATES.SAVE");
 
 		const title = index < 0
-			? game.i18n.localize("AC2D20.TEMPLATES.AddTruth")
-			: game.i18n.localize("AC2D20.TEMPLATES.EditTruth");
+			? game.i18n.localize("CC2D20.TEMPLATES.AddTruth")
+			: game.i18n.localize("CC2D20.TEMPLATES.EditTruth");
 
 		const dialog = new DialogEditTruth({
 			title,
@@ -60,7 +60,7 @@ export default class DialogEditTruth extends Dialog {
 							actor.update({"system.truths": currentTruths});
 						}
 						else {
-							ac2d20.logger.error("Truth index out of range");
+							cc2d20.logger.error("Truth index out of range");
 						}
 					},
 				},

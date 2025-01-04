@@ -4,7 +4,7 @@
 	"effects": [
 	],
 	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
+	"img": "systems/cc2d20/assets/skills.svg",
 	"name": "Tactics",
 	"system": {
 		"defaultAttribute": "agi",
@@ -13,15 +13,11 @@
 		"focuses": [
 			{
 				"isfocus": false,
-				"title": "Air Force"
+				"title": "Cavalry"
 			},
 			{
 				"isfocus": false,
-				"title": "Army"
-			},
-			{
-				"isfocus": false,
-				"title": "Covert Operations"
+				"title": "Infantry"
 			},
 			{
 				"isfocus": false,
@@ -33,7 +29,11 @@
 			},
 			{
 				"isfocus": false,
-				"title": "Technical Projects"
+				"title": "Omen Reading"
+			},
+			{
+				"isfocus": false,
+				"title": "Scouting"
 			}
 		],
 		"summary": "",

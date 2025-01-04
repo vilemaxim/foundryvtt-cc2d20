@@ -4,7 +4,7 @@
 	"effects": [
 	],
 	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
+	"img": "systems/cc2d20/assets/skills.svg",
 	"name": "Survival",
 	"system": {
 		"defaultAttribute": "agi",
@@ -14,6 +14,10 @@
 			{
 				"isfocus": false,
 				"title": "Animal Handling"
+			},
+			{
+				"isfocus": false,
+				"title": "Boating"
 			},
 			{
 				"isfocus": false,
@@ -29,11 +33,15 @@
 			},
 			{
 				"isfocus": false,
-				"title": "Orienteering"
+				"title": "Navigation"
 			},
 			{
 				"isfocus": false,
 				"title": "Tracking"
+			},
+			{
+				"isfocus": false,
+				"title": "Woodcraft"
 			}
 		],
 		"summary": "",

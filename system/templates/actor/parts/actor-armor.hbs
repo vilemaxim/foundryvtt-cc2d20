@@ -1,5 +1,5 @@
 <div class="section-title">
-	<h3>{{localize "AC2D20.RESISTANCE.armor"}}<span class="item-create clickable" data-type="armor" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+	<h3>{{localize "CC2D20.RESISTANCE.armor"}}<span class="item-create clickable" data-type="armor" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
 	<span class="right-slope olive"></span>
 </div>
 
@@ -7,9 +7,9 @@
 	<div class="item">
 		<div class="row">
 			<div class="cell f2 green align-left" style="background-color: #494e31;"><strong>Name</strong></div>
-			<div class="cell f1 align-center"><strong>{{localize "AC2D20.RESISTANCE.resistance"}}</strong></div>
-			<div class="cell f3 align-center"><strong>{{localize "AC2D20.WEAPONS.qualities"}}</strong></div>
-			<div class="cell f1 align-center"><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}</strong></div>
+			<div class="cell f1 align-center"><strong>{{localize "CC2D20.RESISTANCE.resistance"}}</strong></div>
+			<div class="cell f3 align-center"><strong>{{localize "CC2D20.WEAPONS.qualities"}}</strong></div>
+			<div class="cell f1 align-center"><strong>{{localize "CC2D20.TEMPLATES.Restriction"}}</strong></div>
 		</div>
 	</div>
 	{{#each armor as |item key|}}
@@ -18,14 +18,14 @@
 			<div class="cell f2 green align-left align-center cell-expander cell-name">
 				<img src="{{item.img}}" />
 				{{item.name}}
-				<a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
+				<a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "CC2D20.TEMPLATES.equipped"}}'>
 					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-tshirt"></i>
 				</a>
 			</div>
 			<div class="cell f1 align-center">{{item.system.resistance}}</div>
 			<div class="cell f3 align-center">
 				{{#each (getArmorQualities item.system.qualities)}}
-				{{localize (concat 'AC2D20.ARMOR.qualities.' @this)}}
+				{{localize (concat 'CC2D20.ARMOR.qualities.' @this)}}
 				{{/each}}
 			</div>
 			<div class="cell f1 align-center">{{item.system.restriction}}</div>

@@ -22,8 +22,8 @@
 @import 'components/journal';
 @import "components/momentum-app";
 
-/* Styles limited to ac2d20 sheets */
-.ac2d20 {
+/* Styles limited to cc2d20 sheets */
+.cc2d20 {
 	@import 'components/forms';
 	@import 'components/resource';
 	@import 'components/items';
@@ -31,12 +31,12 @@
 
 }
 
-.ac2d20.sheet.actor {
+.cc2d20.sheet.actor {
 	min-width: 720px;
 }
-.ac2d20.sheet.npc {
+.cc2d20.sheet.npc {
 	min-width: 550px;
 }
-.ac2d20.sheet.vehicle {
+.cc2d20.sheet.vehicle {
 	min-width: 550px;
 }

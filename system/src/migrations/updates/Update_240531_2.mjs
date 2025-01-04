@@ -1,6 +1,6 @@
-import { ACUpdateBase } from "../ACUpdateBase.mjs";
+import { ACUpdateBase } from "../CCUpdateBase.mjs";
 
-export default class Update_240531_2 extends ACUpdateBase {
+export default class Update_240531_2 extends CCUpdateBase {
 	static version = 240531.2;
 
 	async updateItem(itemData, actorData) {
@@ -37,13 +37,13 @@ export default class Update_240531_2 extends ACUpdateBase {
 
 		for (const skillName of this.englishSkillNames) {
 			const localizedName =
-				game.i18n.localize(`AC2D20.SKILL.${skillName.toUpperCase()}`);
+				game.i18n.localize(`CC2D20.SKILL.${skillName.toUpperCase()}`);
 
 			lut.skill[localizedName] = skillName;
 		}
 
 		for (const focusName of this.englishFocusNames) {
-			const localizedName = game.i18n.localize(`AC2D20.FOCUS.${focusName}`);
+			const localizedName = game.i18n.localize(`CC2D20.FOCUS.${focusName}`);
 
 			lut.focus[localizedName] = focusName;
 		}

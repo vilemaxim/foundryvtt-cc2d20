@@ -1,3 +1,3 @@
-export {default as ACActor} from "./ACActor.mjs";
-export {default as ACItem} from "./ACItem.mjs";
+export {default as CCActor} from "./CCActor.mjs";
+export {default as CCItem} from "./CCItem.mjs";
 export {default as Combat2d20} from "./Combat2d20.mjs";

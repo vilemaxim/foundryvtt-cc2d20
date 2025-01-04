@@ -1,7 +1,7 @@
 import { SYSTEM_ID } from "../config.mjs";
 import * as migrations from "./updates/_module.mjs";
 
-export default class ACMigrationRunner {
+export default class CCMigrationRunner {
 	allMigrations;
 
 	currentMigrationTask;
@@ -65,7 +65,7 @@ export default class ACMigrationRunner {
 
 				await doc.update(updateData);
 
-				ac2d20.logger.log(`Migrated ${documentName} document "${doc.name}" in Compendium "${pack.collection}"`);
+				cc2d20.logger.log(`Migrated ${documentName} document "${doc.name}" in Compendium "${pack.collection}"`);
 			}
 			catch(err) {
 				err.message = `Failed system migration for document "${doc.name}" in pack "${pack.collection}": ${err.message}`;
@@ -76,7 +76,7 @@ export default class ACMigrationRunner {
 		// Apply the original locked status for the pack
 		await pack.configure({locked: wasLocked});
 
-		ac2d20.logger.log(`Migrated all "${documentName}" documents from Compendium "${pack.collection}"`);
+		cc2d20.logger.log(`Migrated all "${documentName}" documents from Compendium "${pack.collection}"`);
 	}
 
 	async migrateSceneTokens(scene) {
@@ -100,7 +100,7 @@ export default class ACMigrationRunner {
 				const updateData = await this.currentMigrationTask.updateActor(actorData);
 
 				if (!foundry.utils.isEmpty(updateData)) {
-					ac2d20.logger.log(`Migrating Token document "${token.name}"`);
+					cc2d20.logger.log(`Migrating Token document "${token.name}"`);
 
 					updateData._id = token.id;
 
@@ -113,7 +113,7 @@ export default class ACMigrationRunner {
 			}
 			catch(err) {
 				err.message = `Failed system migration for Token "${token.name}": ${err.message}`;
-				ac2d20.logger.error(err);
+				cc2d20.logger.error(err);
 			}
 		}
 	}
@@ -146,7 +146,7 @@ export default class ACMigrationRunner {
 				const updateData = await this.currentMigrationTask.updateActor(actorSource);
 
 				if (!foundry.utils.isEmpty(updateData)) {
-					ac2d20.logger.log(`Migrating Actor document "${actor.name}"`);
+					cc2d20.logger.log(`Migrating Actor document "${actor.name}"`);
 					await actor.update(updateData);
 				}
 
@@ -166,7 +166,7 @@ export default class ACMigrationRunner {
 					);
 
 					if (!foundry.utils.isEmpty(updateData)) {
-						ac2d20.logger.log(`Migrating Actor Item document "${item.name}"`);
+						cc2d20.logger.log(`Migrating Actor Item document "${item.name}"`);
 						await item.update(updateData);
 					}
 				}
@@ -193,7 +193,7 @@ export default class ACMigrationRunner {
 				const updateData = await this.currentMigrationTask.updateItem(source);
 
 				if (!foundry.utils.isEmpty(updateData)) {
-					ac2d20.logger.log(`Migrating Item document "${item.name}"`);
+					cc2d20.logger.log(`Migrating Item document "${item.name}"`);
 					item.update(updateData);
 				}
 			}
@@ -213,9 +213,9 @@ export default class ACMigrationRunner {
 	async migrateWorld() {
 		const version = this.currentMigrationTask.version;
 
-		const startMessage = game.i18n.format("AC2D20.MIGRATION.begin_schema", {version});
+		const startMessage = game.i18n.format("CC2D20.MIGRATION.begin_schema", {version});
 
-		ac2d20.logger.log(startMessage);
+		cc2d20.logger.log(startMessage);
 		ui.notifications.info(startMessage, {permanent: false});
 
 		await this.migrateSettings();
@@ -224,8 +224,8 @@ export default class ACMigrationRunner {
 		await this.migrateWorldScenes();
 		await this.migrateWorldCompendiums();
 
-		ac2d20.logger.log(
-			game.i18n.format("AC2D20.MIGRATION.completed_schema", {version})
+		cc2d20.logger.log(
+			game.i18n.format("CC2D20.MIGRATION.completed_schema", {version})
 		);
 	}
 
@@ -234,7 +234,7 @@ export default class ACMigrationRunner {
 	}
 
 	async run() {
-		ac2d20.logger.log(`Current schema version ${this.currentVersion}`);
+		cc2d20.logger.log(`Current schema version ${this.currentVersion}`);
 
 		await this.buildMigrations();
 
@@ -250,9 +250,9 @@ export default class ACMigrationRunner {
 
 		if (!this.needsMigration()) return;
 
-		const startMessage = game.i18n.localize("AC2D20.MIGRATION.begin_migration");
+		const startMessage = game.i18n.localize("CC2D20.MIGRATION.begin_migration");
 
-		ac2d20.logger.log(startMessage);
+		cc2d20.logger.log(startMessage);
 		ui.notifications.info(startMessage, {permanent: false});
 
 		for (const migration of this.allMigrations) {
@@ -265,9 +265,9 @@ export default class ACMigrationRunner {
 			}
 		}
 
-		const endMessage = game.i18n.localize("AC2D20.MIGRATION.completed_migration");
+		const endMessage = game.i18n.localize("CC2D20.MIGRATION.completed_migration");
 
-		ac2d20.logger.log(endMessage);
+		cc2d20.logger.log(endMessage);
 		ui.notifications.info(endMessage, {permanent: false});
 	}
 }

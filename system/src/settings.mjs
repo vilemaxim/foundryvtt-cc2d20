@@ -34,8 +34,8 @@ export default async function registerSettings() {
 	// -------------------
 	//
 	game.settings.register(SYSTEM_ID, "gmMomentumShowToPlayers", {
-		name: game.i18n.localize("AC2D20.SETTINGS.showmomentumName"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.showmomentumHint"),
+		name: game.i18n.localize("CC2D20.SETTINGS.showmomentumName"),
+		hint: game.i18n.localize("CC2D20.SETTINGS.showmomentumHint"),
 		scope: "world",
 		config: true,
 		default: false,
@@ -43,8 +43,8 @@ export default async function registerSettings() {
 	});
 
 	game.settings.register(SYSTEM_ID, "maxAppShowToPlayers", {
-		name: game.i18n.localize("AC2D20.SETTINGS.maxappName"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.maxappHint"),
+		name: game.i18n.localize("CC2D20.SETTINGS.maxappName"),
+		hint: game.i18n.localize("CC2D20.SETTINGS.maxappHint"),
 		scope: "world",
 		config: true,
 		default: false,
@@ -52,8 +52,8 @@ export default async function registerSettings() {
 	});
 
 	game.settings.register(SYSTEM_ID, "combatTrackerMomentumUpdate", {
-		name: game.i18n.localize("AC2D20.SETTINGS.ctName"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.ctHint"),
+		name: game.i18n.localize("CC2D20.SETTINGS.ctName"),
+		hint: game.i18n.localize("CC2D20.SETTINGS.ctHint"),
 		scope: "world",
 		config: true,
 		default: true,
@@ -65,8 +65,8 @@ export default async function registerSettings() {
 	// ----------------
 	//
 	game.settings.register(SYSTEM_ID, "debugEnabled", {
-		name: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.label"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.hint"),
+		name: game.i18n.localize("CC2D20.SETTINGS.debugEnabled.label"),
+		hint: game.i18n.localize("CC2D20.SETTINGS.debugEnabled.hint"),
 		scope: "world",
 		type: Boolean,
 		config: true,
@@ -75,8 +75,8 @@ export default async function registerSettings() {
 	});
 
 	game.settings.register(SYSTEM_ID, "worldSchemaVersion", {
-		name: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.label"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.hint"),
+		name: game.i18n.localize("CC2D20.SETTINGS.worldSchemaVersion.label"),
+		hint: game.i18n.localize("CC2D20.SETTINGS.worldSchemaVersion.hint"),
 		scope: "world",
 		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
 		default: -1,
@@ -84,8 +84,8 @@ export default async function registerSettings() {
 	});
 
 	game.settings.register(SYSTEM_ID, "systemVersion", {
-		name: game.i18n.localize("AC2D20.SETTINGS.systemVersion.label"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.systemVersion.hint"),
+		name: game.i18n.localize("CC2D20.SETTINGS.systemVersion.label"),
+		hint: game.i18n.localize("CC2D20.SETTINGS.systemVersion.hint"),
 		scope: "world",
 		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
 		default: "",
@@ -93,8 +93,8 @@ export default async function registerSettings() {
 	});
 
 	game.settings.register(SYSTEM_ID, "migrateSystemCompendiums", {
-		name: game.i18n.localize("AC2D20.SETTINGS.migrateSystemCompendiums.label"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.migrateSystemCompendiums.label"),
+		name: game.i18n.localize("CC2D20.SETTINGS.migrateSystemCompendiums.label"),
+		hint: game.i18n.localize("CC2D20.SETTINGS.migrateSystemCompendiums.label"),
 		scope: "world",
 		type: Boolean,
 		config: game.settings.get(SYSTEM_ID, "debugEnabled"),

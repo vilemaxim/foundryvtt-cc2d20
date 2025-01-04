@@ -4,8 +4,8 @@
 	"effects": [
 	],
 	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
-	"name": "Vehicles",
+	"img": "systems/cc2d20/assets/skills.svg",
+	"name": "Crafting",
 	"system": {
 		"defaultAttribute": "agi",
 		"description": "",
@@ -13,27 +13,19 @@
 		"focuses": [
 			{
 				"isfocus": false,
-				"title": "Cars"
+				"title": "Armorsmithing"
 			},
 			{
 				"isfocus": false,
-				"title": "Motorcycles"
+				"title": "Cooking"
 			},
 			{
 				"isfocus": false,
-				"title": "Heavy Vehicles"
+				"title": "Tailoring"
 			},
 			{
 				"isfocus": false,
-				"title": "Tanks"
-			},
-			{
-				"isfocus": false,
-				"title": "Aircraft"
-			},
-			{
-				"isfocus": false,
-				"title": "Watercraft"
+				"title": "Weaponsmithing"
 			}
 		],
 		"summary": "",

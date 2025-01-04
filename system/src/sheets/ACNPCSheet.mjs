@@ -1,16 +1,16 @@
-import ACActorSheet from "./ACActorSheet.mjs";
+import CCActorSheet from "./CCActorSheet.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
- * @extends {ACActorSheet}
+ * @extends {CCActorSheet}
  */
-export default class ACNPCSheet extends ACActorSheet {
+export default class CCNPCSheet extends CCActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["ac2d20", "sheet", "npc"],
-			template: "systems/ac2d20/templates/actor/npc-sheet.hbs",
+			classes: ["cc2d20", "sheet", "npc"],
+			template: "systems/cc2d20/templates/actor/npc-sheet.hbs",
 			width: 550,
 			height: 780,
 			tabs: [{

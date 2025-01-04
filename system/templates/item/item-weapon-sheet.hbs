@@ -2,10 +2,10 @@
 
 	{{!-- Sheet Tab Navigation --}}
 	<nav class="sheet-tabs" data-group="primary">
-		<img src="systems/ac2d20/assets/main-menu-slope.webp">
+		<img src="systems/cc2d20/assets/main-menu-slope.webp">
 		<div class="buttons">
-			<a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-			<a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+			<a class="item" data-tab="attributes">{{localize "CC2D20.TEMPLATES.Attributes"}}</a>
+			<a class="item" data-tab="description">{{localize "CC2D20.TEMPLATES.Description"}}</a>
 		</div>
 	</nav>
 
@@ -23,22 +23,22 @@
 		<div class="tab attributes" data-group="primary" data-tab="attributes">
 
 			<div class="resource-row flexrow bgEven resource">
-				<label class="resource-label" for="system.weaponType"><strong>{{localize "AC2D20.WEAPONS.type"}}</strong></label>
+				<label class="resource-label" for="system.weaponType"><strong>{{localize "CC2D20.WEAPONS.type"}}</strong></label>
 				<select name="system.weaponType">
 					{{#select system.weaponType}}
-					{{#each AC2D20.WEAPONS.weaponTypes as |weaponType key| }}
-					<option value="{{weaponType.bonusAttribute}}">{{localize (concat 'AC2D20.WEAPONS.weaponTypes.' weaponType.label)}}</option>
+					{{#each CC2D20.WEAPONS.weaponTypes as |weaponType key| }}
+					<option value="{{weaponType.bonusAttribute}}">{{localize (concat 'CC2D20.WEAPONS.weaponTypes.' weaponType.label)}}</option>
 					{{/each}}
 					{{/select}}
 				</select>
 			</div>
 
 			<div class="flexrow resource-row bgOdd resource">
-				<label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Skill"}}</strong></label>
+				<label class="resource-label"><strong>{{localize "CC2D20.TEMPLATES.Skill"}}</strong></label>
 				<select name="system.skill">
 					{{#select system.skill}}
 						<option value="">&nbsp;</option>
-						{{#each AC2D20.SKILLS as |skill key|}}
+						{{#each CC2D20.SKILLS as |skill key|}}
 							<option value="{{skill.key}}">
 								{{localize skill.label}}
 							</option>
@@ -48,7 +48,7 @@
 			</div>
 
 			<div class="flexrow resource-row bgOdd resource">
-				<label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></label>
+				<label class="resource-label"><strong>{{localize "CC2D20.TEMPLATES.Focus"}}</strong></label>
 				<select name="system.focus">
 					{{#select system.focus}}
 						<option value="">&nbsp;</option>
@@ -60,10 +60,10 @@
 			</div>
 
 			<div class="resource-row flexrow bgEven resource">
-				<label class="resource-label" for="system.range"><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}</strong></label>
+				<label class="resource-label" for="system.range"><strong>{{localize "CC2D20.TEMPLATES.RANGE"}}</strong></label>
 				<select name="system.range">
 					{{#select system.range}}
-					{{#each AC2D20.WEAPONS.range as |range key|}}
+					{{#each CC2D20.WEAPONS.range as |range key|}}
 					<option value="{{key}}">{{localize range }}</option>
 					{{/each}}
 					{{/select}}
@@ -71,24 +71,24 @@
 			</div>
 
 			<div class="resource-row flexrow bgOdd resource">
-				<label class="resource-label" for="system.stress"><strong>{{localize "AC2D20.STRESS.stress"}}</strong></label>
+				<label class="resource-label" for="system.stress"><strong>{{localize "CC2D20.STRESS.stress"}}</strong></label>
 				<input type="number" name="system.stress" value="{{system.stress}}">
 			</div>
 
 			<div class="resource-row flexrow bgEven resource">
-				<label class="resource-label" for="system.ammo"><strong>{{localize "AC2D20.TEMPLATES.Ammo"}}</strong></label>
+				<label class="resource-label" for="system.ammo"><strong>{{localize "CC2D20.TEMPLATES.Ammo"}}</strong></label>
 				<input type="number" name="system.ammo" value="{{system.ammo}}">
 			</div>
 
 			<div class="resource-row flexrow bgOdd resource">
-				<label class="resource-label" for="system.salvo"><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}</strong></label>
+				<label class="resource-label" for="system.salvo"><strong>{{localize "CC2D20.TEMPLATES.Salvo"}}</strong></label>
 				<input type="text" name="system.salvo" value="{{system.salvo}}">
 			</div>
 
 			<div class="grid">
 				<div class="resource-row">
 					<div class="section-title">
-						<h3>{{localize "AC2D20.TEMPLATES.Weapon_Qualities"}}</h3>
+						<h3>{{localize "CC2D20.TEMPLATES.Weapon_Qualities"}}</h3>
 						<span class="right-slope olive"></span>
 					</div>
 					<div class="items-list" style="border: 1px solid #759549;">
@@ -118,7 +118,7 @@
 				</div>
 				<div class="resource-row">
 					<div class="section-title">
-						<h3>{{localize "AC2D20.TEMPLATES.DAMAGE_EFFECTS"}}</h3>
+						<h3>{{localize "CC2D20.TEMPLATES.DAMAGE_EFFECTS"}}</h3>
 						<span class="right-slope olive"></span>
 					</div>
 					<div class="items-list" style="border: 1px solid #759549;">

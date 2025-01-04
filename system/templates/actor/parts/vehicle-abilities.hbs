@@ -1,13 +1,13 @@
 <div class="grid grid-3col">
 	<div>
 		<div class="label-number-box">
-			<label>{{localize 'AC2D20.TEMPLATES.scale'}}</label>
+			<label>{{localize 'CC2D20.TEMPLATES.scale'}}</label>
 			<span>
 				<input type="number" class="borderless num-short-2" name="system.scale" value="{{system.scale}}" data-dtype="Number" min="0" />
 			</span>
 		</div>
 		<div class="label-number-box">
-			<label>{{localize 'AC2D20.STRESS.stress'}}</label>
+			<label>{{localize 'CC2D20.STRESS.stress'}}</label>
 			<span>
 				<input type="number" class="borderless num-short-2" name="system.stress.value" value="{{system.stress.value}}" data-dtype="Number" min="0" />
 				<label>/</label>
@@ -15,23 +15,23 @@
 			</span>
 		</div>
 		<div class="label-number-box">
-			<label>{{localize 'AC2D20.RESISTANCE.armor'}}</label>
+			<label>{{localize 'CC2D20.RESISTANCE.armor'}}</label>
 			<input type="number" class="borderless num-short-2" name="system.armorResistance.value" value="{{system.armorResistance.value}}" data-dtype="Number" min="0" />
 		</div>
 	</div>
 	<div>
 		<div class="label-number-box">
 			<span>
-				<label class="roll-attribute clickable" data-attr='bra'>{{localize 'AC2D20.Ability.bra'}}</label>
+				<label class="roll-attribute clickable" data-attr='bra'>{{localize 'CC2D20.Ability.bra'}}</label>
 				<input type="number" class="borderless num-short-2" name="system.attributes.bra.value" value="{{system.attributes.bra.value}}" data-dtype="Number" min="0" />
 			</span>
 			<span>
-				<label>{{localize 'AC2D20.TEMPLATES.bonus'}}</label>
+				<label>{{localize 'CC2D20.TEMPLATES.bonus'}}</label>
 				<input type="number" class="borderless num-short-2" name="system.attributes.bra.bonus" value="{{system.attributes.bra.bonus}}" data-dtype="Number" min="0" />
 			</span>
 		</div>
 		<div class="label-number-box">
-			<label>{{localize 'AC2D20.TEMPLATES.INJURIES'}}</label>
+			<label>{{localize 'CC2D20.TEMPLATES.INJURIES'}}</label>
 			<span>
 				<input type="number" class="borderless num-short-2" name="system.injuries.value" value="{{system.injuries.value}}" data-dtype="Number" min="0" />
 				<label>/</label>
@@ -39,14 +39,14 @@
 			</span>
 		</div>
 		<div class="label-number-box">
-			<label>{{localize 'AC2D20.TEMPLATES.speed'}}</label>
+			<label>{{localize 'CC2D20.TEMPLATES.speed'}}</label>
 			<input type="number" class="borderless num-short-2" name="system.speed" value="{{system.speed}}" data-dtype="Number" min="0" />
 		</div>
 	</div>
 	<div style="display: flex; flex-direction: column;">
 		<div class="section-title">
 			<h3 class="blue">
-				{{localize "AC2D20.TEMPLATES.Truths"}}
+				{{localize "CC2D20.TEMPLATES.Truths"}}
 				<span class="truth-create clickable">&nbsp;&nbsp;&nbsp;&nbsp; +</span>
 			</h3>
 			<span class="right-slope olive"></span>
@@ -88,7 +88,7 @@
 <div class="grid" style="gap: 1.25rem; margin-bottom: 1.25rem;">
 	<div>
 		<div class="section-title">
-			<h3 class="">{{localize "AC2D20.WEAPONS.qualities"}}</h3>
+			<h3 class="">{{localize "CC2D20.WEAPONS.qualities"}}</h3>
 			<span class="right-slope olive"></span>
 		</div>
 		<div class="items-list" style="border: 1px solid #759549;">
@@ -129,7 +129,7 @@
 	<div>
 		<div class="section-title">
 			<h3>
-				{{localize "AC2D20.TEMPLATES.Weapons"}}
+				{{localize "CC2D20.TEMPLATES.Weapons"}}
 				<span
 					class="item-create clickable"
 					data-type="weapon"
@@ -155,7 +155,7 @@
 					<div class="skill-focuses">
 						<span class="skill-focus focus-name" data-item-id="{{this._id}}">
 							<strong>
-								{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+								{{localize (concat 'CC2D20.FOCUS.' this.system.focus)}}
 							</strong>
 							|&nbsp;
 						</span>

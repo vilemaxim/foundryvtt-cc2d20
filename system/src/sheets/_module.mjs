@@ -1,4 +1,4 @@
-export {default as ACActorSheet} from "./ACActorSheet.mjs";
-export {default as ACItemSheet} from "./ACItemSheet.mjs";
-export {default as ACNPCSheet} from "./ACNPCSheet.mjs";
-export {default as ACVehicleSheet} from "./ACVehicleSheet.mjs";
+export {default as CCActorSheet} from "./CCActorSheet.mjs";
+export {default as CCItemSheet} from "./CCItemSheet.mjs";
+export {default as CCNPCSheet} from "./CCNPCSheet.mjs";
+export {default as CCVehicleSheet} from "./CCVehicleSheet.mjs";

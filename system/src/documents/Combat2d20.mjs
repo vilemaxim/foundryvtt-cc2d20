@@ -20,7 +20,7 @@ export default class Combat2d20 extends Combat {
 
 	get shouldUpdateMomentum() {
 		return game.settings.get(
-			"ac2d20", "combatTrackerMomentumUpdate"
+			"cc2d20", "combatTrackerMomentumUpdate"
 		);
 	}
 
@@ -31,17 +31,17 @@ export default class Combat2d20 extends Combat {
 			yes: () => {
 				if (this.shouldUpdateMomentum && this.started) {
 					if (game.user.isGM) {
-						game.ac2d20.MomentumTracker.adjustAP("partyMomentum", -1);
+						game.cc2d20.MomentumTracker.adjustAP("partyMomentum", -1);
 					}
 					else {
-						game.socket.emit("system.ac2d20", {
+						game.socket.emit("system.cc2d20", {
 							operation: "adjustAP",
 							data: { diff: -1, type: "partyMomentum" },
 						});
 					}
 
 					ui.notifications.info(
-						game.i18n.localize("AC2D20.Combat.CombatEndMomentumPoolDecremented")
+						game.i18n.localize("CC2D20.Combat.CombatEndMomentumPoolDecremented")
 					);
 				}
 				this.delete();
@@ -54,17 +54,17 @@ export default class Combat2d20 extends Combat {
 
 		if (this.shouldUpdateMomentum) {
 			if (game.user.isGM) {
-				game.ac2d20.MomentumTracker.adjustAP("partyMomentum", -1);
+				game.cc2d20.MomentumTracker.adjustAP("partyMomentum", -1);
 			}
 			else {
-				game.socket.emit("system.ac2d20", {
+				game.socket.emit("system.cc2d20", {
 					operation: "adjustAP",
 					data: { diff: -1, type: "partyMomentum" },
 				});
 			}
 
 			ui.notifications.info(
-				game.i18n.localize("AC2D20.Combat.CombatRoundMomentumPoolDecremented")
+				game.i18n.localize("CC2D20.Combat.CombatRoundMomentumPoolDecremented")
 			);
 		}
 

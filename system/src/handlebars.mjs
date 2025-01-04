@@ -4,7 +4,7 @@ export const registerHandlebarsHelpers = function() {
 	/*  GENERAL HELPERS                             */
 	/* -------------------------------------------- */
 	Handlebars.registerHelper("activeEffectIcon", effect => {
-		return ac2d20.utils.foundryMinVersion(12)
+		return cc2d20.utils.foundryMinVersion(12)
 			? effect.img
 			: effect.icon;
 	});
@@ -20,7 +20,7 @@ export const registerHandlebarsHelpers = function() {
 	});
 
 	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
-		return CONFIG.AC2D20[arg1][arg2] ? CONFIG.AC2D20[arg1][arg2] : arg2;
+		return CONFIG.CC2D20[arg1][arg2] ? CONFIG.CC2D20[arg1][arg2] : arg2;
 	});
 
 	Handlebars.registerHelper("toLowerCase", function(str) {
@@ -68,16 +68,16 @@ export const registerHandlebarsHelpers = function() {
 		const elements = [];
 
 		for (const key in effects) {
-			if (!CONFIG.AC2D20.DAMAGE_EFFECTS.hasOwnProperty(key)) continue;
+			if (!CONFIG.CC2D20.DAMAGE_EFFECTS.hasOwnProperty(key)) continue;
 
 			const effect = effects[key];
 
 			if (!effect.value) continue;
 
-			let effectName = CONFIG.AC2D20.DAMAGE_EFFECTS[key];
+			let effectName = CONFIG.CC2D20.DAMAGE_EFFECTS[key];
 			if (effect.rank > 0) effectName += ` ${effect.rank}`;
 
-			const tooltip = CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS[key];
+			const tooltip = CONFIG.CC2D20.DAMAGE_EFFECT_TOOLTIPS[key];
 
 			const resultHtml = document.createElement("span");
 			resultHtml.classList.add("effect", "hover");
@@ -104,15 +104,15 @@ export const registerHandlebarsHelpers = function() {
 		const elements = [];
 
 		for (const key in qualities) {
-			if (!CONFIG.AC2D20.WEAPON_QUALITIES.hasOwnProperty(key)) continue;
+			if (!CONFIG.CC2D20.WEAPON_QUALITIES.hasOwnProperty(key)) continue;
 
 			const effect = qualities[key];
 
 			if (!effect.value) continue;
 
-			let qualityName = CONFIG.AC2D20.WEAPON_QUALITIES[key];
+			let qualityName = CONFIG.CC2D20.WEAPON_QUALITIES[key];
 
-			const tooltip = CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key];
+			const tooltip = CONFIG.CC2D20.WEAPON_QUALITY_TOOLTIPS[key];
 
 			const resultHtml = document.createElement("span");
 			resultHtml.classList.add("quality", "hover");
@@ -148,7 +148,7 @@ export const registerHandlebarsHelpers = function() {
 	});
 
 	/* -------------------------------------------- */
-	/*  AC2D20 HELPERS                             */
+	/*  CC2D20 HELPERS                             */
 	/* -------------------------------------------- */
 
 	Handlebars.registerHelper("damageFaIconClass", function(str) {
@@ -161,12 +161,12 @@ export const registerHandlebarsHelpers = function() {
 	Handlebars.registerHelper("getSkillFocusList", function(key) {
 		if (key === "") return [];
 
-		const skill = CONFIG.AC2D20.SKILLS.find(s => s.key === key);
+		const skill = CONFIG.CC2D20.SKILLS.find(s => s.key === key);
 
 		const focuses = {};
 
 		for (const focus of skill.focuses) {
-			focuses[focus] = ac2d20.utils.getLocalizedFocusName(focus);
+			focuses[focus] = cc2d20.utils.getLocalizedFocusName(focus);
 		}
 
 		return focuses;
@@ -179,8 +179,8 @@ export const registerHandlebarsHelpers = function() {
 			let tooltip = "";
 			let locString = "";
 			if (v.value) {
-				let tstr = `AC2D20.WEAPONS.effects.${k}`;
-				let lstr = `AC2D20.WEAPONS.damageEffect.${k}`;
+				let tstr = `CC2D20.WEAPONS.effects.${k}`;
+				let lstr = `CC2D20.WEAPONS.damageEffect.${k}`;
 				tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr);
 				locString = game.i18n.localize(lstr);
 				effString += `<span data-tooltip="${tooltip}">${locString}`;
@@ -201,8 +201,8 @@ export const registerHandlebarsHelpers = function() {
 			let tooltip = "";
 			let locString = "";
 			if (v.value) {
-				let tstr = `AC2D20.WEAPONS.qualities.${k}`;
-				let lstr = `AC2D20.WEAPONS.weaponQuality.${k}`;
+				let tstr = `CC2D20.WEAPONS.qualities.${k}`;
+				let lstr = `CC2D20.WEAPONS.weaponQuality.${k}`;
 				tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr);
 				locString = game.i18n.localize(lstr);
 				quString += `<span data-tooltip="${tooltip}">${locString}</span>`;
@@ -232,8 +232,8 @@ export const registerHandlebarsHelpers = function() {
 
 		const focuses = foundry.utils.duplicate(skill?.system?.focuses ?? [])
 			.sort((a, b) => {
-				const aTitle = ac2d20.utils.getLocalizedFocusName(a.title);
-				const bTitle = ac2d20.utils.getLocalizedFocusName(b.title);
+				const aTitle = cc2d20.utils.getLocalizedFocusName(a.title);
+				const bTitle = cc2d20.utils.getLocalizedFocusName(b.title);
 
 				return aTitle.localeCompare(bTitle);
 			});
@@ -241,7 +241,7 @@ export const registerHandlebarsHelpers = function() {
 		for (const focus of focuses) {
 			if (onlyFocused && !focus.isfocus) continue;
 
-			const tooltip = game.i18n.localize(`AC2D20.Tooltips.Focus.${focus.title.slugify()}`);
+			const tooltip = game.i18n.localize(`CC2D20.Tooltips.Focus.${focus.title.slugify()}`);
 			const resultHtml = document.createElement("span");
 
 			resultHtml.classList.add("skill-focus", "clickable", "roll-focus");
@@ -252,7 +252,7 @@ export const registerHandlebarsHelpers = function() {
 			resultHtml.dataset.itemId = skill._id;
 			resultHtml.dataset.tooltip = tooltip;
 
-			resultHtml.innerHTML = ac2d20.utils.getLocalizedFocusName(focus.title);
+			resultHtml.innerHTML = cc2d20.utils.getLocalizedFocusName(focus.title);
 
 			elements.push(resultHtml.outerHTML);
 		}

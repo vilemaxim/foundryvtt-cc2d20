@@ -1,4 +1,4 @@
-export default class ACUtils {
+export default class CCUtils {
 
 	static foundryMinVersion(version) {
 		const majorVersion = parseInt(game.version.split(".")[0]);
@@ -24,13 +24,13 @@ export default class ACUtils {
 
 
 	static getLocalizedFocusName(name) {
-		const i18nKey = `AC2D20.FOCUS.${name}`;
+		const i18nKey = `CC2D20.FOCUS.${name}`;
 		return this.getLocalizedStringIfAvailable(i18nKey, name);
 	}
 
 
 	static getLocalizedSkillName(name) {
-		const i18nKey = `AC2D20.SKILL.${name.toUpperCase()}`;
+		const i18nKey = `CC2D20.SKILL.${name.toUpperCase()}`;
 		return this.getLocalizedStringIfAvailable(i18nKey, name);
 	}
 
@@ -59,16 +59,16 @@ export default class ACUtils {
 	//
 	static async showNewReleaseNotes() {
 		if (game.user.isGM) {
-			const savedVersion = game.settings.get("ac2d20", "systemVersion");
+			const savedVersion = game.settings.get("cc2d20", "systemVersion");
 			const systemVersion = game.system.version;
 
 			if (systemVersion !== savedVersion) {
 				Hotbar.toggleDocumentSheet(
-					CONFIG.AC2D20.JOURNAL_UUIDS.releaseNotes
+					CONFIG.CC2D20.JOURNAL_UUIDS.releaseNotes
 				);
 
 				game.settings.set(
-					"ac2d20", "systemVersion",
+					"cc2d20", "systemVersion",
 					systemVersion
 				);
 			}

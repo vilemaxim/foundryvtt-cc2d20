@@ -9,9 +9,9 @@ import { readyHook } from "../hooks/readyHook.mjs";
 import { setupHook } from "../hooks/setupHook.mjs";
 import { renderChatMessageHook } from "../hooks/renderChatMessageHook.mjs";
 
-export const ACHooks = {
+export const CCHooks = {
 	attach: () => {
-		ac2d20.logger.debug("Attaching hooks");
+		cc2d20.logger.debug("Attaching hooks");
 
 		const listeners = [
 			readyHook,

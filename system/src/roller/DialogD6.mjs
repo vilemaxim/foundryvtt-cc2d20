@@ -7,14 +7,14 @@ export default class DialogD6 extends Dialog {
 	}
 
 	static async createDialog({
-		ac2d20Roll = null,
+		cc2d20Roll = null,
 		actorId = null,
 		diceNum = 2,
 		itemId = null,
 		rollName = "Challenge Roll",
 	}={}) {
 		const dialogData = {
-			ac2d20Roll,
+			cc2d20Roll,
 			actorId,
 			diceNum,
 			itemId,
@@ -22,7 +22,7 @@ export default class DialogD6 extends Dialog {
 		};
 
 		const html = await renderTemplate(
-			"systems/ac2d20/templates/dialogs/dialogD6.hbs",
+			"systems/cc2d20/templates/dialogs/dialogD6.hbs",
 			dialogData
 		);
 
@@ -40,7 +40,7 @@ export default class DialogD6 extends Dialog {
 
 						if (isNaN(diceNum) || diceNum <= 0) {
 							return ui.notifications.error(
-								game.i18n.localize("AC2D20.Error.NumberOfDiceMustBeNonZero")
+								game.i18n.localize("CC2D20.Error.NumberOfDiceMustBeNonZero")
 							);
 						}
 
@@ -51,13 +51,13 @@ export default class DialogD6 extends Dialog {
 							rollName,
 						};
 
-						if (ac2d20Roll) {
-							rollOptions.ac2d20Roll = ac2d20Roll;
+						if (cc2d20Roll) {
+							rollOptions.cc2d20Roll = cc2d20Roll;
 
-							game.ac2d20.Roller2D20.addD6(rollOptions);
+							game.cc2d20.Roller2D20.addD6(rollOptions);
 						}
 						else {
-							game.ac2d20.Roller2D20.rollD6(rollOptions);
+							game.cc2d20.Roller2D20.rollD6(rollOptions);
 						}
 					},
 				},

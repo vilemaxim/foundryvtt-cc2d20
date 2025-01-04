@@ -29,17 +29,17 @@ jobs:
         cp --force LICENSE.txt system/.
         cp --force README.md system/.
         SYSTEM_VERSION=$(grep -oP '(?<="version": ")[^"]+' system/system.json | tr -d '\n')
-        perl -pi -E "s|/latest/download/ac2d20\\.zip|/download/release-$SYSTEM_VERSION/ac2d20.zip|" system/system.json
+        perl -pi -E "s|/latest/download/cc2d20\\.zip|/download/release-$SYSTEM_VERSION/cc2d20.zip|" system/system.json
         echo "systemVersion=$SYSTEM_VERSION" >> $GITHUB_ENV
 
-    - run: cd system && zip -r ../ac2d20.zip ./*
+    - run: cd system && zip -r ../cc2d20.zip ./*
 
     - name: Create Version Release
       id: create_version_release
       uses: ncipollo/release-action@v1
       with:
         allowUpdates: false
-        artifacts: './system/system.json, ./ac2d20.zip'
+        artifacts: './system/system.json, ./cc2d20.zip'
         draft: false
         name: release-${{ env.systemVersion }}
         prerelease: true

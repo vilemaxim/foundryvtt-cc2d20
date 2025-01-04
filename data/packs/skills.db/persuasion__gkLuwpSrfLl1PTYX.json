@@ -4,7 +4,7 @@
 	"effects": [
 	],
 	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
+	"img": "systems/cc2d20/assets/skills.svg",
 	"name": "Persuasion",
 	"system": {
 		"defaultAttribute": "agi",
@@ -17,6 +17,10 @@
 			},
 			{
 				"isfocus": false,
+				"title": "Deception"
+			},
+			{
+				"isfocus": false,
 				"title": "Innuendo"
 			},
 			{
@@ -25,19 +29,15 @@
 			},
 			{
 				"isfocus": false,
+				"title": "Invocation"
+			},
+			{
+				"isfocus": false,
 				"title": "Negotiation"
 			},
 			{
 				"isfocus": false,
 				"title": "Rhetoric"
-			},
-			{
-				"isfocus": false,
-				"title": "Deceive"
-			},
-			{
-				"isfocus": false,
-				"title": "Invocation"
 			}
 		],
 		"summary": "",

@@ -3,9 +3,9 @@
 	{{!-- Sheet Tab Navigation --}}
 	<nav class="sheet-tabs" data-group="primary">
 		{{!-- Default tab is specified in actor-sheet.mjs --}}
-		<img src="systems/ac2d20/assets/main-menu-slope.webp">
+		<img src="systems/cc2d20/assets/main-menu-slope.webp">
 		<div class="buttons">
-			<a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
+			<a class="item" data-tab="attributes">{{localize "CC2D20.TEMPLATES.Attributes"}}</a>
 		</div>
 	</nav>
 
@@ -19,7 +19,7 @@
 			<div class="grid" style="margin: 0;">
 				<div class="resource-row bgOdd">
 					<div class="section-title">
-						<h3>{{localize "AC2D20.TEMPLATES.Resistance"}}</h3>
+						<h3>{{localize "CC2D20.TEMPLATES.Resistance"}}</h3>
 						<span class="right-slope olive"></span>
 					</div>
 					<input type="number" name="system.resistance" value="{{system.resistance}}" style="text-align:center">
@@ -27,14 +27,14 @@
 
 				<div class="resource-row">
 					<div class="section-title">
-						<h3>{{localize "AC2D20.TEMPLATES.Qualities"}}</h3>
+						<h3>{{localize "CC2D20.TEMPLATES.Qualities"}}</h3>
 						<span class="right-slope olive"></span>
 					</div>
 					<div class="items-list" style="border: 1px solid #759549;">
 						{{#each system.qualities as |item key|}}
 						<div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
 							<label>
-								<input type="checkbox" name="system.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.ARMOR.qualities.' key)}}
+								<input type="checkbox" name="system.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'CC2D20.ARMOR.qualities.' key)}}
 							</label>
 						</div>
 						{{/each}}
@@ -42,7 +42,7 @@
 				</div>
 			</div>
 			<div class="section-title">
-				<h3>{{localize "AC2D20.TEMPLATES.Description"}}</h3>
+				<h3>{{localize "CC2D20.TEMPLATES.Description"}}</h3>
 				<span class="right-slope olive"></span>
 			</div>
 			{{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}

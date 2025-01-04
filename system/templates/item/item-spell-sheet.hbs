@@ -2,10 +2,10 @@
 
 	{{!-- Sheet Tab Navigation --}}
 	<nav class="sheet-tabs" data-group="primary">
-		<img src="systems/ac2d20/assets/main-menu-slope.webp">
+		<img src="systems/cc2d20/assets/main-menu-slope.webp">
 		<div class="buttons">
-			<a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-			<a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+			<a class="item" data-tab="attributes">{{localize "CC2D20.TEMPLATES.Attributes"}}</a>
+			<a class="item" data-tab="description">{{localize "CC2D20.TEMPLATES.Description"}}</a>
 		</div>
 	</nav>
 
@@ -24,11 +24,11 @@
 
 			<div class="resource green-field flexrow">
 				<span>
-					<label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Skill"}}</label>
+					<label style="margin-right: 5px;">{{localize "CC2D20.TEMPLATES.Skill"}}</label>
 					<select name="system.skill">
 						{{#select system.skill}}
 							<option value="">&nbsp;</option>
-							{{#each AC2D20.SKILLS as |skill key|}}
+							{{#each CC2D20.SKILLS as |skill key|}}
 								<option value="{{skill.key}}">
 									{{localize skill.label}}
 								</option>
@@ -37,7 +37,7 @@
 					</select>
 				</span>
 				<span>
-					<label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
+					<label style="margin-right: 5px;">{{localize "CC2D20.TEMPLATES.Focus"}}</label>
 					<select name="system.focus">
 						{{#select system.focus}}
 							<option value="">&nbsp;</option>
@@ -51,21 +51,21 @@
 			</div>
 			<div class="resource flexrow green-field">
 				<span class="flex-group-left">
-					<label>{{localize "AC2D20.TEMPLATES.Difficulty"}}</label>
+					<label>{{localize "CC2D20.TEMPLATES.Difficulty"}}</label>
 					<input type="number" class="num-short-2" name="system.difficulty" value="{{system.difficulty}}">
 				</span>
 				<span class="flex flex-group-left" style="gap:5px">
-					<label>{{localize "AC2D20.TEMPLATES.Duration"}}</label>
+					<label>{{localize "CC2D20.TEMPLATES.Duration"}}</label>
 					<input type="text" name="system.duration" value="{{system.duration}}">
 				</span>
 			</div>
 			<div class="resource flexrow green-field">
 				<span class="flex flex-group-left" style="gap:5px">
-					<label>{{localize "AC2D20.TEMPLATES.Cost"}}</label>
+					<label>{{localize "CC2D20.TEMPLATES.Cost"}}</label>
 					<input type="number" class="num-short-2" name="system.cost" value="{{system.cost}}">
 				</span>
 				<span class="flex flex-group-left" style="gap:5px">
-					<label>{{localize "AC2D20.TEMPLATES.CostEffects"}}</label>
+					<label>{{localize "CC2D20.TEMPLATES.CostEffects"}}</label>
 					<input type="text" name="system.costEffects" value="{{system.costEffects}}">
 				</span>
 			</div>
@@ -73,12 +73,12 @@
 			<hr>
 
 			<div class="section-title" style="margin-bottom: 0.313rem;">
-				<h3>{{localize "AC2D20.TEMPLATES.Ritual"}}</h3>
+				<h3>{{localize "CC2D20.TEMPLATES.Ritual"}}</h3>
 				<span class="right-slope olive"></span>
 			</div>
 
 			<div class="resource flexrow green-field">
-				<label>{{localize "AC2D20.TEMPLATES.ritual_stress"}}</label>
+				<label>{{localize "CC2D20.TEMPLATES.ritual_stress"}}</label>
 				<span class="flex flex-group-left" style="gap:5px">
 					<input type="number" class="num-short-2" name="system.ritualStress.value" value="{{system.ritualStress.value}}">
 					<label>/</label>
@@ -86,7 +86,7 @@
 				</span>
 			</div>
 			<div class="resource flexrow green-field">
-				<label>{{localize "AC2D20.TEMPLATES.ritual_steps"}}</label>
+				<label>{{localize "CC2D20.TEMPLATES.ritual_steps"}}</label>
 				<span class="flex flex-group-left" style="gap:5px">
 					<input type="number" class="num-short-2" name="system.ritualSteps.value" value="{{system.ritualSteps.value}}">
 					<label>/</label>
@@ -94,12 +94,12 @@
 				</span>
 			</div>
 			<div class="resource flexrow green-field">
-				<label>{{localize "AC2D20.TEMPLATES.ritual_resistance"}}</label>
+				<label>{{localize "CC2D20.TEMPLATES.ritual_resistance"}}</label>
 				<input type="text" name="system.ritualResistance" value="{{system.ritualResistance}}">
 			</div>
 			<div class="resource flexrow green-field">
 				<span class="flex flex-group-left" style="gap:5px">
-					<label>{{localize "AC2D20.TEMPLATES.ritual_requirements"}}</label>
+					<label>{{localize "CC2D20.TEMPLATES.ritual_requirements"}}</label>
 					<input type="text" name="system.ritualRequirements" value="{{system.ritualRequirements}}">
 				</span>
 			</div>

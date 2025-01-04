@@ -12,21 +12,21 @@
 		{{#if system.weight includeZero=true}}
 		<div style="display: flex; flex-direction: row; justify-content: space-between;">
 			<div class="resource">
-				<label class="resource-label">{{localize "AC2D20.UI.Quantity"}}</label>
+				<label class="resource-label">{{localize "CC2D20.UI.Quantity"}}</label>
 				<input class="num-short-2" type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
 			</div>
 			<div class="resource">
-				<label class="resource-label">{{localize "AC2D20.TEMPLATES.Size"}}</label>
+				<label class="resource-label">{{localize "CC2D20.TEMPLATES.Size"}}</label>
 				<select name="system.weight">
 					{{#select system.weight}}
-					<option value="0" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Trivial"}}</option>
-					<option value="1" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Minor"}}</option>
-					<option value="3" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Major"}}</option>
+					<option value="0" data-dtype="Number">{{localize "CC2D20.TEMPLATES.SizeLevels.Trivial"}}</option>
+					<option value="1" data-dtype="Number">{{localize "CC2D20.TEMPLATES.SizeLevels.Minor"}}</option>
+					<option value="3" data-dtype="Number">{{localize "CC2D20.TEMPLATES.SizeLevels.Major"}}</option>
 					{{/select}}
 				</select>
 			</div>
 			<div class="resource">
-				<label class="resource-label">{{localize "AC2D20.TEMPLATES.Restriction"}}</label>
+				<label class="resource-label">{{localize "CC2D20.TEMPLATES.Restriction"}}</label>
 				<input class="num-short-2" type="number" name="system.restriction" value="{{system.restriction}}" data-dtype="Number" />
 			</div>
 		</div>

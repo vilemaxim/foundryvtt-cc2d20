@@ -40,17 +40,17 @@ export function prepareActiveEffectCategories(effects) {
 	const categories = {
 		temporary: {
 			type: "temporary",
-			label: game.i18n.localize("AC2D20.EFFECTS.Temporary"),
+			label: game.i18n.localize("CC2D20.EFFECTS.Temporary"),
 			effects: [],
 		},
 		passive: {
 			type: "passive",
-			label: game.i18n.localize("AC2D20.EFFECTS.Passive"),
+			label: game.i18n.localize("CC2D20.EFFECTS.Passive"),
 			effects: [],
 		},
 		inactive: {
 			type: "inactive",
-			label: game.i18n.localize("AC2D20.EFFECTS.Inactive"),
+			label: game.i18n.localize("CC2D20.EFFECTS.Inactive"),
 			effects: [],
 		},
 	};

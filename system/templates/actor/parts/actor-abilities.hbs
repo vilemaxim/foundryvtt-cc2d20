@@ -1,6 +1,6 @@
 <div class="attribute-grid" style="margin-bottom: 10px;">
 	<div class='attribute-cell olive'>
-		{{localize "AC2D20.TEMPLATES.Attribute"}}
+		{{localize "CC2D20.TEMPLATES.Attribute"}}
 	</div>
 	{{#each system.attributes as |attribute key|}}
 		<div class="attribute-cell green">
@@ -8,30 +8,30 @@
 				class="resource-label align-left roll-attribute clickable"
 				data-attr="{{key}}"
 				data-label="{{attribute.label}}"
-				data-tooltip="{{localize (concat 'AC2D20.Tooltips.Attribute.' key)}}"
+				data-tooltip="{{localize (concat 'CC2D20.Tooltips.Attribute.' key)}}"
 			>
 				<strong>
-					{{localize (concat 'AC2D20.Ability.' key)}}
+					{{localize (concat 'CC2D20.Ability.' key)}}
 				</strong>
 			</label>
 		</div>
 	{{/each}}
 
-	<div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.rating"}}</strong></div>
+	<div class='attribute-cell green'><strong>{{localize "CC2D20.TEMPLATES.rating"}}</strong></div>
 	{{#each system.attributes as |attribute key|}}
 	<div class="attribute-cell">
 		<input type="number" class="borderless" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
 	</div>
 	{{/each}}
 
-	<div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.bonus"}}</strong></div>
+	<div class='attribute-cell green'><strong>{{localize "CC2D20.TEMPLATES.bonus"}}</strong></div>
 	{{#each system.attributes as |attribute key|}}
 	<div class="attribute-cell">
 		<input
 			type="number"
 				class="borderless"
 				data-dtype="Number"
-				data-tooltip="{{localize "AC2D20.Warnings.DerivedValue"}}"
+				data-tooltip="{{localize "CC2D20.Warnings.DerivedValue"}}"
 				min="0"
 				name="system.attributes.{{key}}.bonus"
 				value="{{attribute.bonus}}"
@@ -45,7 +45,7 @@
 	<div class="flexrow">
 		<div class="derived-box">
 			<h3 style="padding-right: 25px;">
-				{{localize "AC2D20.STRESS.stress"}}
+				{{localize "CC2D20.STRESS.stress"}}
 			</h3>
 			<input
 				class="num-short-2"
@@ -59,7 +59,7 @@
 
 			<input
 				class="num-short-2"
-				data-tooltip="{{localize "AC2D20.Warnings.DerivedValue"}}"
+				data-tooltip="{{localize "CC2D20.Warnings.DerivedValue"}}"
 				min="0"
 				name="system.stress.max"
 				type="number"
@@ -74,28 +74,28 @@
 	<div class="derived-box">
 		<input class="num-short-2" type="number" min="0" name="system.fatigue" value="{{system.fatigue}}">
 		<div class="section-title">
-			<h3>{{localize "AC2D20.RESISTANCE.fatigue"}}</h3>
+			<h3>{{localize "CC2D20.RESISTANCE.fatigue"}}</h3>
 			<span class="right-slope olive"></span>
 		</div>
 	</div>
 	<div class="derived-box">
 		<input class="num-short-2" type="number" min="0" name="system.courageResistance.value" value="{{system.courageResistance.value}}">
 		<div class="section-title">
-			<h3>{{localize "AC2D20.RESISTANCE.courage"}}</h3>
+			<h3>{{localize "CC2D20.RESISTANCE.courage"}}</h3>
 			<span class="right-slope olive"></span>
 		</div>
 	</div>
 	<div class="derived-box">
 		<input class="num-short-2" type="number" min="0" name="system.armorResistance.value" value="{{system.armorResistance.value}}">
 		<div class="section-title">
-			<h3>{{localize "AC2D20.RESISTANCE.armor"}}</h3>
+			<h3>{{localize "CC2D20.RESISTANCE.armor"}}</h3>
 			<span class="right-slope olive"></span>
 		</div>
 	</div>
 	<div class="derived-box">
 		<input class="num-short-2" type="number" min="0" name="system.fortune.value" value="{{system.fortune.value}}">
 		<div class="section-title">
-			<h3>{{localize "AC2D20.TEMPLATES.fortune"}}</h3>
+			<h3>{{localize "CC2D20.TEMPLATES.fortune"}}</h3>
 			<span class="right-slope olive"></span>
 		</div>
 	</div>
@@ -107,7 +107,7 @@
 	<div style="display: flex; flex-direction: column;">
 		<div class="section-title">
 				<h3 class="green">
-					{{localize "AC2D20.TEMPLATES.Personal_Truth_Scars"}}
+					{{localize "CC2D20.TEMPLATES.Personal_Truth_Scars"}}
 					<span class="truth-create clickable">&nbsp;&nbsp;&nbsp;&nbsp; +</span>
 				</h3>
 				<span class="right-slope olive"></span>
@@ -122,15 +122,15 @@
 	</div>
 	<div style="display: flex; flex-direction: column;">
 		<div class="section-title">
-				<h3 class="green">{{localize "AC2D20.TEMPLATES.INJURIES"}}</h3>
+				<h3 class="green">{{localize "CC2D20.TEMPLATES.INJURIES"}}</h3>
 				<span class="right-slope olive"></span>
 		</div>
 		<div class="injuries-grid">
 			<div class="injury-cell injury" data-injury="injury0">
 				{{#if (hasInjury system.injuries.injury0.text)}}
 				<div class="controls">
-					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury0.injuryType true)}}{{localize "AC2D20.INJURIES.mental"}}{{/if}}{{#if (ne system.injuries.injury0.injuryType true)}}{{localize "AC2D20.INJURIES.physical"}}{{/if}}" {{#if (eq system.injuries.injury0.injuryType true)}}checked{{/if}}>
-					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury0.treated true)}}{{localize "AC2D20.INJURIES.treated"}}{{/if}}{{#if (ne system.injuries.injury0.treated true)}}{{localize "AC2D20.INJURIES.nottreated"}}{{/if}}" {{#if (eq system.injuries.injury0.treated true)}}checked{{/if}}>
+					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury0.injuryType true)}}{{localize "CC2D20.INJURIES.mental"}}{{/if}}{{#if (ne system.injuries.injury0.injuryType true)}}{{localize "CC2D20.INJURIES.physical"}}{{/if}}" {{#if (eq system.injuries.injury0.injuryType true)}}checked{{/if}}>
+					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury0.treated true)}}{{localize "CC2D20.INJURIES.treated"}}{{/if}}{{#if (ne system.injuries.injury0.treated true)}}{{localize "CC2D20.INJURIES.nottreated"}}{{/if}}" {{#if (eq system.injuries.injury0.treated true)}}checked{{/if}}>
 				</div>
 				<hr style="margin: 1px 0;" />
 				{{/if}}
@@ -139,8 +139,8 @@
 			<div class="injury-cell injury" data-injury="injury1">
 				{{#if (hasInjury system.injuries.injury1.text)}}
 				<div class="controls">
-					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury1.injuryType true)}}{{localize "AC2D20.INJURIES.mental"}}{{/if}}{{#if (ne system.injuries.injury1.injuryType true)}}{{localize "AC2D20.INJURIES.physical"}}{{/if}}" {{#if (eq system.injuries.injury1.injuryType true)}}checked{{/if}}>
-					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury1.treated true)}}{{localize "AC2D20.INJURIES.treated"}}{{/if}}{{#if (ne system.injuries.injury1.treated true)}}{{localize "AC2D20.INJURIES.nottreated"}}{{/if}}" {{#if (eq system.injuries.injury1.treated true)}}checked{{/if}}>
+					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury1.injuryType true)}}{{localize "CC2D20.INJURIES.mental"}}{{/if}}{{#if (ne system.injuries.injury1.injuryType true)}}{{localize "CC2D20.INJURIES.physical"}}{{/if}}" {{#if (eq system.injuries.injury1.injuryType true)}}checked{{/if}}>
+					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury1.treated true)}}{{localize "CC2D20.INJURIES.treated"}}{{/if}}{{#if (ne system.injuries.injury1.treated true)}}{{localize "CC2D20.INJURIES.nottreated"}}{{/if}}" {{#if (eq system.injuries.injury1.treated true)}}checked{{/if}}>
 				</div>
 				<hr style="margin: 1px 0;" />
 				{{/if}}
@@ -149,8 +149,8 @@
 			<div class="injury-cell injury" data-injury="injury2">
 				{{#if (hasInjury system.injuries.injury2.text)}}
 				<div class="controls">
-					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury2.injuryType true)}}{{localize "AC2D20.INJURIES.mental"}}{{/if}}{{#if (ne system.injuries.injury2.injuryType true)}}{{localize "AC2D20.INJURIES.physical"}}{{/if}}" {{#if (eq system.injuries.injury2.injuryType true)}}checked{{/if}}>
-					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury2.treated true)}}{{localize "AC2D20.INJURIES.treated"}}{{/if}}{{#if (ne system.injuries.injury2.treated true)}}{{localize "AC2D20.INJURIES.nottreated"}}{{/if}}" {{#if (eq system.injuries.injury2.treated true)}}checked{{/if}}>
+					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury2.injuryType true)}}{{localize "CC2D20.INJURIES.mental"}}{{/if}}{{#if (ne system.injuries.injury2.injuryType true)}}{{localize "CC2D20.INJURIES.physical"}}{{/if}}" {{#if (eq system.injuries.injury2.injuryType true)}}checked{{/if}}>
+					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury2.treated true)}}{{localize "CC2D20.INJURIES.treated"}}{{/if}}{{#if (ne system.injuries.injury2.treated true)}}{{localize "CC2D20.INJURIES.nottreated"}}{{/if}}" {{#if (eq system.injuries.injury2.treated true)}}checked{{/if}}>
 				</div>
 				<hr style="margin: 1px 0;" />
 				{{/if}}
@@ -162,7 +162,7 @@
 
 <div class="section-title">
 	<h3>
-		{{localize "AC2D20.TEMPLATES.Skills"}}
+		{{localize "CC2D20.TEMPLATES.Skills"}}
 	</h3>
 	<span class="right-slope olive"></span>
 </div>
@@ -175,7 +175,7 @@
 			<label
 				class="skill-name clickable roll-skill"
 				data-item-id="{{item._id}}"
-				data-tooltip="{{localize (concat 'AC2D20.Tooltips.Skill.' (slugify item.name))}}"
+				data-tooltip="{{localize (concat 'CC2D20.Tooltips.Skill.' (slugify item.name))}}"
 			>
 				{{item.localizedName}}
 			</label>

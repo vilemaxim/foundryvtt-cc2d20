@@ -4,7 +4,7 @@
 	"effects": [
 	],
 	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
+	"img": "systems/cc2d20/assets/skills.svg",
 	"name": "Medicine",
 	"system": {
 		"defaultAttribute": "agi",
@@ -13,27 +13,23 @@
 		"focuses": [
 			{
 				"isfocus": false,
-				"title": "First Aid"
+				"title": "Contagion"
 			},
 			{
 				"isfocus": false,
-				"title": "Infectious Diseases"
+				"title": "Faith Healing"
 			},
 			{
 				"isfocus": false,
-				"title": "Pharmacology"
+				"title": "Field Treatment"
 			},
 			{
 				"isfocus": false,
-				"title": "Psychiatry"
+				"title": "Pharmacia"
 			},
 			{
 				"isfocus": false,
 				"title": "Surgery"
-			},
-			{
-				"isfocus": false,
-				"title": "Toxicology"
 			}
 		],
 		"summary": "",

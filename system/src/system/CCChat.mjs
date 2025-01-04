@@ -1,4 +1,4 @@
-export class ACChat {
+export class CCChat {
 
 	static async _renderChatMessage(
 		actor,
@@ -33,7 +33,7 @@ export class ACChat {
 	}
 
 	static async onRenderChatMessage(message, html, data) {
-		ac2d20.logger.debug("Running renderChatMessage hook");
+		cc2d20.logger.debug("Running renderChatMessage hook");
 
 		const rerollButton = html.find(".reroll-button");
 
@@ -48,11 +48,11 @@ export class ACChat {
 					rerollIndex.push($(die).data("index"));
 				}
 
-				const rollData = message.flags.ac2d20Roll;
+				const rollData = message.flags.cc2d20Roll;
 
 				switch (rollData.diceFace) {
 					case "d6":
-						ac2d20.Roller2D20.rerollD6({
+						cc2d20.Roller2D20.rerollD6({
 							rollName: rollData.rollName,
 							rerollIndexes: rerollIndex,
 							diceRolled: rollData.diceRolled,
@@ -61,7 +61,7 @@ export class ACChat {
 						});
 						break;
 					case "d20":
-						ac2d20.Roller2D20.rerollD20({
+						cc2d20.Roller2D20.rerollD20({
 							rollName: rollData.rollName,
 							rerollIndexes: rerollIndex,
 							successThreshold: rollData.successThreshold,
@@ -92,16 +92,16 @@ export class ACChat {
 			addButton[0].setAttribute("data-messageId", message.id);
 
 			addButton.click(ev => {
-				const ac2d20Roll = message.flags.ac2d20Roll;
+				const cc2d20Roll = message.flags.cc2d20Roll;
 				const actorId = message.flags.actorId;
 				const itemId = message.flags.itemId;
 
-				game.ac2d20.DialogD6.createDialog({
-					ac2d20Roll,
+				game.cc2d20.DialogD6.createDialog({
+					cc2d20Roll,
 					actorId,
 					diceNum: 1,
 					itemId,
-					rollName: ac2d20Roll.rollName,
+					rollName: cc2d20Roll.rollName,
 				});
 			});
 		}

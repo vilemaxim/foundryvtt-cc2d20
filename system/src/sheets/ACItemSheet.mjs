@@ -4,12 +4,12 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export default class ACItemSheet extends ItemSheet {
+export default class CCItemSheet extends ItemSheet {
 
 	/** @override */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["ac2d20", "sheet", "item"],
+			classes: ["cc2d20", "sheet", "item"],
 			width: 520,
 			height: 560,
 			tabs: [{
@@ -23,7 +23,7 @@ export default class ACItemSheet extends ItemSheet {
 
 	/** @override */
 	get template() {
-		const path = "systems/ac2d20/templates/item";
+		const path = "systems/cc2d20/templates/item";
 		return `${path}/item-${this.item.type}-sheet.hbs`;
 	}
 
@@ -52,7 +52,7 @@ export default class ACItemSheet extends ItemSheet {
 		html.find(".effect-control").click(ev => {
 			if (this.item.isOwned) {
 				return ui.notifications.warn(
-					game.i18n.localize("AC2D20.Warnings.OnEditOwnedItemActiveEffects")
+					game.i18n.localize("CC2D20.Warnings.OnEditOwnedItemActiveEffects")
 				);
 			}
 
@@ -104,7 +104,7 @@ export default class ACItemSheet extends ItemSheet {
 		const source = item.toObject();
 
 		foundry.utils.mergeObject(context, {
-			AC2D20: CONFIG.AC2D20,
+			CC2D20: CONFIG.CC2D20,
 			effects: prepareActiveEffectCategories(item.effects),
 			flags: item.flags,
 			isEmbedded: item.isEmbedded,
@@ -141,13 +141,13 @@ export default class ACItemSheet extends ItemSheet {
 
 	_getWeaponDamageEffects() {
 		const damageEffects = [];
-		for (const key in CONFIG.AC2D20.DAMAGE_EFFECTS) {
+		for (const key in CONFIG.CC2D20.DAMAGE_EFFECTS) {
 			damageEffects.push({
 				active: this.item.system?.effect[key].value ?? false,
-				hasRank: CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK[key],
+				hasRank: CONFIG.CC2D20.DAMAGE_EFFECT_HAS_RANK[key],
 				rank: this.item.system?.effect[key].rank,
 				key,
-				label: CONFIG.AC2D20.DAMAGE_EFFECTS[key],
+				label: CONFIG.CC2D20.DAMAGE_EFFECTS[key],
 			});
 		}
 
@@ -159,11 +159,11 @@ export default class ACItemSheet extends ItemSheet {
 
 	_getWeaponQualities() {
 		const weaponQualities = [];
-		for (const key in CONFIG.AC2D20.WEAPON_QUALITIES) {
+		for (const key in CONFIG.CC2D20.WEAPON_QUALITIES) {
 			weaponQualities.push({
 				active: this.item.system?.qualities[key].value ?? false,
 				key,
-				label: CONFIG.AC2D20.WEAPON_QUALITIES[key],
+				label: CONFIG.CC2D20.WEAPON_QUALITIES[key],
 			});
 		}
 

@@ -4,7 +4,7 @@
  * is ideal for the Simple system.
  * @extends {Actor}
  */
-export default class ACActor extends Actor {
+export default class CCActor extends Actor {
 
 	_calculateAttributeBonuses() {
 		for (const attribute of Object.keys(this.system.attributes)) {
@@ -81,7 +81,7 @@ export default class ACActor extends Actor {
 		);
 
 		if (!resilienceSkill) {
-			return ac2d20.logger.error(
+			return cc2d20.logger.error(
 				`Unable to locate 'Resilience' skill on character ${this.name}`
 			);
 		}
@@ -147,7 +147,7 @@ export default class ACActor extends Actor {
 
 		const update = {prototypeToken};
 		if (!data.img) {
-			const image = CONFIG.AC2D20.DEFAULT_TOKENS[data.type] ?? undefined;
+			const image = CONFIG.CC2D20.DEFAULT_TOKENS[data.type] ?? undefined;
 
 			if (image) {
 				update.img = image;
@@ -169,13 +169,13 @@ export default class ACActor extends Actor {
 
 			if (!alreadyHasSkills) {
 				// let skillsCompendium = game.settings.get(
-				// 	"ac2d20", "compendium-skills"
+				// 	"cc2d20", "compendium-skills"
 				// );
 
-				// if (!skillsCompendium) skillsCompendium = "ac2d20.skills";
+				// if (!skillsCompendium) skillsCompendium = "cc2d20.skills";
 
 				const packSkills =
-					await game.packs.get("ac2d20.skills").getDocuments();
+					await game.packs.get("cc2d20.skills").getDocuments();
 
 				update.items = this.items.map(i => i.toObject());
 

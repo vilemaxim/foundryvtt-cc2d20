@@ -4,7 +4,7 @@
 	"effects": [
 	],
 	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
+	"img": "systems/cc2d20/assets/skills.svg",
 	"name": "Stealth",
 	"system": {
 		"defaultAttribute": "agi",
@@ -13,19 +13,27 @@
 		"focuses": [
 			{
 				"isfocus": false,
+				"title": "Concealment"
+			},
+			{
+				"isfocus": false,
 				"title": "Disguise"
 			},
 			{
 				"isfocus": false,
-				"title": "Camouflage"
+				"title": "Escape Artistry"
 			},
 			{
 				"isfocus": false,
-				"title": "Urban Stealth"
+				"title": "Lock Picking"
 			},
 			{
 				"isfocus": false,
-				"title": "Rural Stealth"
+				"title": "sleight of Hand"
+			},
+			{
+				"isfocus": false,
+				"title": "Sneak"
 			}
 		],
 		"summary": "",

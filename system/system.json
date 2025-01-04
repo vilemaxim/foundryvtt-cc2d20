@@ -1,7 +1,7 @@
 {
-	"id": "ac2d20",
-	"title": "Achtung! Cthulhu 2d20",
-	"description": "An unofficial system for playing Achtung! Cthulhu 2d20 from Modiphius Entertainment Ltd.",
+	"id": "cc2d20",
+	"title": "Cohors Cthulhu 2d20",
+	"description": "An unofficial system for playing Cohors Cthulhu 2d20 from Modiphius Entertainment Ltd.",
 	"version": "11.6.3",
 	"compatibility": {
 		"minimum": "11",
@@ -9,27 +9,22 @@
 	},
 	"authors": [
 		{
-			"name": "Paul Maskelyne",
-			"discord": "Muttley#3296",
-			"email": "mu77ley@gmail.com",
-			"flags": {}
-		},
-		{
-			"name": "HappySteve",
+			"name": "Jeffrey Brite",
+			"email": "jbrite504@gmail.com",
 			"flags": {}
 		}
 	],
 	"esmodules": [
-		"ac2d20-compiled.mjs"
+		"cc2d20-compiled.mjs"
 	],
 	"styles": [
-		"css/ac2d20.css"
+		"css/cc2d20.css"
 	],
 	"packs": [
 		{
 			"name": "system_documentation",
 			"label": "System Documentation",
-			"system": "ac2d20",
+			"system": "cc2d20",
 			"path": "packs/system_documentation",
 			"type": "JournalEntry",
 			"flags": {},
@@ -41,7 +36,7 @@
 		{
 			"name": "macros",
 			"label": "Macros",
-			"system": "ac2d20",
+			"system": "cc2d20",
 			"path": "packs/macros",
 			"type": "Macro",
 			"flags": {},
@@ -53,7 +48,7 @@
 		{
 			"name": "skills",
 			"label": "Skills",
-			"system": "ac2d20",
+			"system": "cc2d20",
 			"path": "packs/skills",
 			"type": "Item",
 			"flags": {},
@@ -65,7 +60,7 @@
 	],
 	"packFolders": [
 		{
-			"name": "Achtung! Cthulhu 2d20",
+			"name": "Cohors Cthulhu 2d20",
 			"sorting": "a",
 			"color": "#494e32",
 			"packs": [
@@ -115,8 +110,8 @@
 		}
 	],
 	"socket": true,
-	"url": "https://github.com/Muttley/foundryvtt-ac2d20",
-	"manifest": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/system.json",
-	"download": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/ac2d20.zip",
-	"background": "systems/ac2d20/assets/artwork/AchtungCthulhu_WallPaper2023_1920x1080_TheVillageofStSulac.jpg"
+	"url": "https://github.com/vilemaxim/foundryvtt-cc2d20",
+	"manifest": "https://github.com/vilemaxim/foundryvtt-cc2d20/releases/latest/download/system.json",
+	"download": "https://github.com/vilemaxim/foundryvtt-cc2d20/releases/latest/download/cc2d20.zip",
+	"background": "systems/cc2d20/assets/artwork/CohorsCthulhu_WebSite.png"
 }

@@ -3,7 +3,7 @@ export default class CombatTracker2d20 extends CombatTracker {
 	static get defaultOptions() {
 		return {
 			...super.defaultOptions,
-			template: "systems/ac2d20/templates/combat/combat-tracker.hbs",
+			template: "systems/cc2d20/templates/combat/combat-tracker.hbs",
 		};
 	}
 
@@ -40,7 +40,7 @@ export default class CombatTracker2d20 extends CombatTracker {
 
 		if (!this.viewed.started) {
 			ui.notifications.warn(
-				game.i18n.localize("AC2D20.Combat.CombatHasNotStarted")
+				game.i18n.localize("CC2D20.Combat.CombatHasNotStarted")
 			);
 			return;
 		}

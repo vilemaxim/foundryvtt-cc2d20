@@ -1,4 +1,4 @@
-export class ACUpdateBase {
+export class CCUpdateBase {
 
 	static version;
 

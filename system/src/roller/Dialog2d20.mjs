@@ -55,7 +55,7 @@ export default class Dialog2d20 extends Dialog {
 			const complication = html.find('[name="complication"]').val();
 			const isFocus = html.find('[name="focus"]').is(":checked");
 
-			game.ac2d20.Roller2D20.rollD20({
+			game.cc2d20.Roller2D20.rollD20({
 				actorId: this.actorId,
 				attribute,
 				complication,
@@ -99,7 +99,7 @@ export default class Dialog2d20 extends Dialog {
 		};
 
 		const html = await renderTemplate(
-			"systems/ac2d20/templates/dialogs/dialog2d20.hbs",
+			"systems/cc2d20/templates/dialogs/dialog2d20.hbs",
 			dialogData
 		);
 

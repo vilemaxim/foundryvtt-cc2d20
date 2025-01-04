@@ -1,18 +1,18 @@
-<div class="ac2d20-chat-message" data-item-id="{{itemId}}">
+<div class="cc2d20-chat-message" data-item-id="{{itemId}}">
 	<div class="content">
 		<h2>
 			{{rollName}}
 		</h2>
 		<p class="success-plaq">
-			{{localize "AC2D20.TEMPLATES.Successes"}}:
+			{{localize "CC2D20.TEMPLATES.Successes"}}:
 			{{successes}}
 			<span class="TN">
-				&nbsp;&nbsp;&nbsp;({{localize "AC2D20.TEMPLATES.TN"}}{{successThreshold}})
+				&nbsp;&nbsp;&nbsp;({{localize "CC2D20.TEMPLATES.TN"}}{{successThreshold}})
 			</span>
 		</p>
 		{{#ifCond complications '>' 0}}
 			<p class="complication-plaq">
-				{{localize "AC2D20.TEMPLATES.Complications"}}:
+				{{localize "CC2D20.TEMPLATES.Complications"}}:
 				{{complications}}
 			</p>
 		{{/ifCond}}
@@ -27,7 +27,7 @@
 			{{/each}}
 		</div>
 		<button class="reroll-button">
-			{{localize "AC2D20.TEMPLATES.Re_roll"}}
+			{{localize "CC2D20.TEMPLATES.Re_roll"}}
 		</button>
 	</div>
 </div>

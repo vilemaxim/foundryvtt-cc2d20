@@ -2,12 +2,12 @@
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
  */
-export default class ACItem extends Item {
+export default class CCItem extends Item {
 
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 		if (data.img === undefined) {
-			let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
+			let ico = `systems/cc2d20/assets/doc-icons/${data.type}.svg`;
 			this.updateSource({ img: ico });
 		}
 	}
@@ -103,7 +103,7 @@ export default class ACItem extends Item {
 		itemData.isEquipment = this.type === "equipment";
 		itemData.isSpecial_rule = this.type === "special_rule";
 		itemData.isSkill = this.type === "skill";
-		const html = await renderTemplate("systems/ac2d20/templates/chat/item.hbs", itemData);
+		const html = await renderTemplate("systems/cc2d20/templates/chat/item.hbs", itemData);
 		const chatData = {
 			user: game.user.id,
 			rollMode: game.settings.get("core", "rollMode"),

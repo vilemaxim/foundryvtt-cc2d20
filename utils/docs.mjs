@@ -3,7 +3,7 @@ import { markdown } from "markdown";
 
 import stringify from "json-stable-stringify-pretty";
 
-const issueUrl = "https://github.com/Muttley/foundryvtt-ac2d20/issues";
+const issueUrl = "https://github.com/Muttley/foundryvtt-cc2d20/issues";
 
 const docs = [
 	{
@@ -19,7 +19,7 @@ function compileDocs(cb) {
 		// Dynamically add links to ticket numbers:
 		//
 		// Matches: [#389]
-		// Outputs: [**[#389](https://github.com/Muttley/foundryvtt-ac2d20/issues/389)**]
+		// Outputs: [**[#389](https://github.com/Muttley/foundryvtt-cc2d20/issues/389)**]
 		//
 		const enhancedSource = source.replace(
 			/\[#(\d+?)\]/g,

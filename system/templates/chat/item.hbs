@@ -1,4 +1,4 @@
-<div class="ac2d20 chat-item">
+<div class="cc2d20 chat-item">
 	{{#if img}}
 	<div style="text-align: center;">
 		<img class="item-img" src="{{img}}" title="{{name}}" />
@@ -12,62 +12,62 @@
 	{{#if isPhysical}}
 	<hr>
 	<div class="flexrow" style="font-size: 0.75rem;">
-		<p><strong>{{localize "AC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'AC2D20.TEMPLATES.SizeLevels.'
+		<p><strong>{{localize "CC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'CC2D20.TEMPLATES.SizeLevels.'
 			(getSizeLabel weight))}}</p>
-		<p><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}:</strong> {{restriction}}</p>
+		<p><strong>{{localize "CC2D20.TEMPLATES.Restriction"}}:</strong> {{restriction}}</p>
 	</div>
 	{{/if}}
 	<hr>
 	{{#if isWeapon}}
-	<p><strong>{{localize "AC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'AC2D20.WEAPONS.weaponTypes.'
+	<p><strong>{{localize "CC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'CC2D20.WEAPONS.weaponTypes.'
 		weaponType)}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Focus"}}:</strong> {{skill}} ({{focus}})</p>
-	<p><strong>{{localize "AC2D20.STRESS.stress"}}:</strong> {{stress}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'AC2D20.RANGE.' range)}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}:</strong> {{salvo}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{listWeaponQualities qualities}}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{{listDamageEffects effect}}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Focus"}}:</strong> {{skill}} ({{focus}})</p>
+	<p><strong>{{localize "CC2D20.STRESS.stress"}}:</strong> {{stress}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'CC2D20.RANGE.' range)}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Salvo"}}:</strong> {{salvo}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Qualities"}}:</strong> {{{listWeaponQualities qualities}}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Effects"}}:</strong> {{{listDamageEffects effect}}}</p>
 	{{/if}}
 
 	{{#if isSkillkit}}
-	<p><strong>{{localize "AC2D20.TEMPLATES.Resources"}}:</strong> {{resources}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong> {{skill}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Resources"}}:</strong> {{resources}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Skill"}}:</strong> {{skill}}</p>
 	{{/if}}
 
 	{{#if isEquipment}}
-	<p><strong>{{localize "AC2D20.UI.Quantity"}}:</strong> {{quantity}}</p>
+	<p><strong>{{localize "CC2D20.UI.Quantity"}}:</strong> {{quantity}}</p>
 	{{/if}}
 
 	{{#if isArmor}}
-	<p><strong>{{localize "AC2D20.TEMPLATES.Resistance"}}:</strong> {{resistance}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getArmorQualities qualities}}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Resistance"}}:</strong> {{resistance}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Qualities"}}:</strong> {{{getArmorQualities qualities}}}</p>
 	{{/if}}
 
 	{{#if isTalent}}
-	<p><strong>{{localize "AC2D20.TEMPLATES.Keywords"}}:</strong> {{keywords}}</p>
+	<p><strong>{{localize "CC2D20.TEMPLATES.Keywords"}}:</strong> {{keywords}}</p>
 	{{/if}}
 
 	{{#if isSpell}}
 	<p>
-		<strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong>
+		<strong>{{localize "CC2D20.TEMPLATES.Skill"}}:</strong>
 		{{skill}}
 		{{#if focus}}
 		({{focus}})
 		{{/if}}
 	</p>
 	<p>
-		<strong>{{localize "AC2D20.TEMPLATES.Difficulty"}}:</strong>
+		<strong>{{localize "CC2D20.TEMPLATES.Difficulty"}}:</strong>
 		{{difficulty}}
 	</p>
 	<p>
-		<strong>{{localize "AC2D20.TEMPLATES.Cost"}}:</strong>
+		<strong>{{localize "CC2D20.TEMPLATES.Cost"}}:</strong>
 		{{cost}}<span class="cth-ico-cth"></span>
 		{{#if costEffects}}
 		({{costEffects}})
 		{{/if}}
 	</p>
 	<p>
-		<strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong>
+		<strong>{{localize "CC2D20.TEMPLATES.Duration"}}:</strong>
 		{{duration}}
 	</p>
 	{{/if}}

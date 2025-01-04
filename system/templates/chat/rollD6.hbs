@@ -1,23 +1,23 @@
-<div class="ac2d20-chat-message">
+<div class="cc2d20-chat-message">
 	<div class="content">
 		<h2>
 			{{rollName}}
 		</h2>
 		<div class="damage-plaq flexrow">
 			<p class="flex-2" style="margin: 0;">
-				{{localize "AC2D20.UI.Damage"}}:
+				{{localize "CC2D20.UI.Damage"}}:
 				{{damage}}
 				|
-				{{localize "AC2D20.TEMPLATES.Effects"}}:
+				{{localize "CC2D20.TEMPLATES.Effects"}}:
 				{{effects}}
 			</p>
 		</div>
 		{{#if item}}
 			<p class="font-size-11">
 				{{#ifCond item.type "===" "spell"}}
-					{{localize "AC2D20.TEMPLATES.Effects"}}: {{itemEffects}}
+					{{localize "CC2D20.TEMPLATES.Effects"}}: {{itemEffects}}
 				{{else}}
-					{{localize "AC2D20.TEMPLATES.Effects"}}: {{{listDamageEffects item.system.effect}}}
+					{{localize "CC2D20.TEMPLATES.Effects"}}: {{{listDamageEffects item.system.effect}}}
 				{{/ifCond}}
 			</p>
 		{{/if}}
@@ -28,10 +28,10 @@
 		</div>
 		<div class="flexrow">
 			<button class="reroll-button">
-				{{localize "AC2D20.TEMPLATES.Re_roll"}}
+				{{localize "CC2D20.TEMPLATES.Re_roll"}}
 			</button>
 			<button class="add-button">
-				{{localize "AC2D20.UI.Add"}}
+				{{localize "CC2D20.UI.Add"}}
 			</button>
 		</div>
 	</div>

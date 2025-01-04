@@ -13,12 +13,12 @@ export default class MomentumTracker extends Application {
 	// override
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["ac2d20", "momentum-tracker"],
+			classes: ["cc2d20", "momentum-tracker"],
 			height: "200",
 			id: "momentum-tracker-app",
 			popOut: false,
 			resizable: false,
-			template: "systems/ac2d20/templates/app/momentum-tracker.hbs",
+			template: "systems/cc2d20/templates/app/momentum-tracker.hbs",
 			title: "AP Tracker",
 			width: "auto",
 		});
@@ -81,7 +81,7 @@ export default class MomentumTracker extends Application {
 
 	static async adjustAP(type, diff) {
 		if (!game.user.isGM) {
-			game.socket.emit("system.ac2d20", {
+			game.socket.emit("system.cc2d20", {
 				operation: "adjustAP",
 				data: { diff, type },
 			});
@@ -99,7 +99,7 @@ export default class MomentumTracker extends Application {
 
 	static async setAP(type, value) {
 		if (!game.user.isGM) {
-			game.socket.emit("system.ac2d20", {
+			game.socket.emit("system.cc2d20", {
 				operation: "setAP",
 				data: { value: value, type: type },
 			});
@@ -127,7 +127,7 @@ export default class MomentumTracker extends Application {
 		MomentumTracker.renderApTracker();
 
 		// emit socket event for the players to update
-		game.socket.emit("system.ac2d20", { operation: "updateAP" });
+		game.socket.emit("system.cc2d20", { operation: "updateAP" });
 	}
 
 	static updateAP() {
@@ -142,7 +142,7 @@ Hooks.once("ready", () => {
 
 	MomentumTracker.renderApTracker();
 
-	game.socket.on("system.ac2d20", ev => {
+	game.socket.on("system.cc2d20", ev => {
 		if (ev.operation === "adjustAP") {
 			if (game.user.isGM) MomentumTracker.adjustAP(ev.data.type, ev.data.diff);
 		}

@@ -2,14 +2,14 @@
 	<div>
 		{{#each system.attributes as |attribute key|}}
 		<div class="label-number-box blue">
-			<label class="roll-attribute clickable" data-attr='{{key}}'>{{localize (concat 'AC2D20.Ability.' key)}}</label>
+			<label class="roll-attribute clickable" data-attr='{{key}}'>{{localize (concat 'CC2D20.Ability.' key)}}</label>
 			<input type="number" class="borderless num-short-2" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
 		</div>
 		{{/each}}
 	</div>
 	<div>
 		<div class="label-number-box blue">
-			<label>{{localize 'AC2D20.STRESS.stress'}}</label>
+			<label>{{localize 'CC2D20.STRESS.stress'}}</label>
 			<span>
 				<input type="number" class="borderless num-short-2" name="system.stress.value" value="{{system.stress.value}}" data-dtype="Number" min="0" />
 				<label>/</label>
@@ -17,7 +17,7 @@
 			</span>
 		</div>
 		<div class="label-number-box blue">
-			<label>{{localize 'AC2D20.TEMPLATES.INJURIES'}}</label>
+			<label>{{localize 'CC2D20.TEMPLATES.INJURIES'}}</label>
 			<span>
 				<input type="number" class="borderless num-short-2" name="system.injuries.value" value="{{system.injuries.value}}" data-dtype="Number" min="0" />
 				<label>/</label>
@@ -25,15 +25,15 @@
 			</span>
 		</div>
 		<div class="label-number-box blue">
-			<label>{{localize 'AC2D20.RESISTANCE.armor'}}</label>
+			<label>{{localize 'CC2D20.RESISTANCE.armor'}}</label>
 			<input type="number" class="borderless num-short-2" name="system.armorResistance.value" value="{{system.armorResistance.value}}" data-dtype="Number" min="0" />
 		</div>
 		<div class="label-number-box blue">
-			<label>{{localize 'AC2D20.RESISTANCE.courage'}}</label>
+			<label>{{localize 'CC2D20.RESISTANCE.courage'}}</label>
 			<input type="number" class="borderless num-short-2" name="system.courageResistance.value" value="{{system.courageResistance.value}}" data-dtype="Number" min="0" />
 		</div>
 		<div class="label-number-box blue">
-			<label>{{localize 'AC2D20.TEMPLATES.Power'}}</label>
+			<label>{{localize 'CC2D20.TEMPLATES.Power'}}</label>
 			<span>
 				<input type="number" class="borderless num-short-2" name="system.power.value" value="{{system.power.value}}" data-dtype="Number" min="0" />
 				<label>/</label>
@@ -44,7 +44,7 @@
 	<div style="display: flex; flex-direction: column;">
 		<div class="section-title">
 			<h3 class="blue">
-				{{localize "AC2D20.TEMPLATES.Truths"}}
+				{{localize "CC2D20.TEMPLATES.Truths"}}
 				<span class="truth-create clickable">&nbsp;&nbsp;&nbsp;&nbsp; +</span>
 			</h3>
 			<span class="right-slope blue"></span>
@@ -63,7 +63,7 @@
 	<div>
 		<div style="margin-bottom: 2rem;">
 			<div class="section-title">
-				<h3 class="blue">{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
+				<h3 class="blue">{{localize "CC2D20.TEMPLATES.Skills"}}</h3>
 				<span class="right-slope blue"></span>
 			</div>
 			<ul class="items-list-npc">
@@ -86,7 +86,7 @@
 		</div>
 		<div style="margin-bottom: 2rem;">
 			<div class="section-title">
-				<h3 class="blue">{{ localize "AC2D20.TEMPLATES.SpecialRules"}}<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+				<h3 class="blue">{{ localize "CC2D20.TEMPLATES.SpecialRules"}}<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
 				<span class="right-slope blue"></span>
 			</div>
 			<ul class="items-list-npc">
@@ -109,7 +109,7 @@
 		<div style="margin-bottom: 2rem;">
 			<div class="section-title">
 				<h3 class="blue">
-					{{localize "AC2D20.TEMPLATES.Weapons"}}
+					{{localize "CC2D20.TEMPLATES.Weapons"}}
 					<span
 						class="item-create clickable"
 						data-type="weapon"
@@ -135,7 +135,7 @@
 						<div class="skill-focuses">
 							<span class="skill-focus focus-name" data-item-id="{{this._id}}">
 								<strong>
-									{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+									{{localize (concat 'CC2D20.FOCUS.' this.system.focus)}}
 								</strong>
 								|&nbsp;
 							</span>
@@ -148,16 +148,16 @@
 		</div>
 		<div style="margin-bottom: 2rem;">
 			<div class="section-title">
-				<h3 class="blue">{{localize "AC2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+				<h3 class="blue">{{localize "CC2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
 				<span class="right-slope blue"></span>
 			</div>
 			<div style="padding: 3px 5px; background-color: #548da9">
-				<label style="color:#ebe7d7">{{localize "AC2D20.Spellcasting.SpellcastingType"}}</label>
+				<label style="color:#ebe7d7">{{localize "CC2D20.Spellcasting.SpellcastingType"}}</label>
 				{{#select system.spellcastingType}}
 				<select name="system.spellcastingType">
-					<option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
-					<option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
-					<option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
+					<option value="traditional">{{localize "CC2D20.Spellcasting.traditional"}}</option>
+					<option value="researcher">{{localize "CC2D20.Spellcasting.researcher"}}</option>
+					<option value="dabbler">{{localize "CC2D20.Spellcasting.dabbler"}}</option>
 				</select>
 				{{/select}}
 			</div>

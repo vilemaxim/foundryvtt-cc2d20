@@ -1,16 +1,16 @@
-import ACActorSheet from "./ACActorSheet.mjs";
+import CCActorSheet from "./CCActorSheet.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
- * @extends {ACActorSheet}
+ * @extends {CCActorSheet}
  */
-export default class ACVehicleSheet extends ACActorSheet {
+export default class CCVehicleSheet extends CCActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["ac2d20", "sheet", "vehicle"],
-			template: "systems/ac2d20/templates/actor/vehicle-sheet.hbs",
+			classes: ["cc2d20", "sheet", "vehicle"],
+			template: "systems/cc2d20/templates/actor/vehicle-sheet.hbs",
 			width: 550,
 			height: 550,
 			tabs: [{
