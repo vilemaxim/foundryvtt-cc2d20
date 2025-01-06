@@ -239,8 +239,6 @@ CC2D20.TEMPLATES.POISON: POISON
 CC2D20.TEMPLATES.Power: Power
 CC2D20.TEMPLATES.Qualities: Qualities
 CC2D20.TEMPLATES.RANGE: Range
-CC2D20.TEMPLATES.Rank: Rank
-CC2D20.TEMPLATES.Ranks_current_maximum: Ranks [current/maximum]
 CC2D20.TEMPLATES.rating: Rating
 CC2D20.TEMPLATES.Re_roll: Re-roll
 CC2D20.TEMPLATES.Requirements: Requirements
